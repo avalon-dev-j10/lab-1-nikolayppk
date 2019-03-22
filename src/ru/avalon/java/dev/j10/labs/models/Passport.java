@@ -15,7 +15,30 @@ package ru.avalon.java.dev.j10.labs.models;
  *  <li> орган, выдавший документ.
  * </ol>
  */
-class Passport {
+public class Passport {
+   public Passport(String Name, String Surname, String Otchestvo){
+       this.Name = Name;
+       this.Surname = Surname;
+       this.Otchestvo = Otchestvo; 
+    } 
+  public Passport(String Name, String Surname){
+       this.Name = Name;
+       this.Surname = Surname;
+  }
+    
+public int Number;
+public String Name;
+public String Surname;
+public String Otchestvo;
+public String SecondName;
+public int Birthday;
+int DataVedachy;
+String KemVydan;
+
+
+}
+
+
 
     /*
      * TODO(Студент): Закончить определение класса.
@@ -37,4 +60,3 @@ class Passport {
      * 5. Обеспечте возможность использования класса за
      *    пределами пакета.
      */
-}

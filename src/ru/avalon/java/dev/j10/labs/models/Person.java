@@ -1,4 +1,5 @@
 package ru.avalon.java.dev.j10.labs.models;
+import ru.avalon.java.dev.j10.labs.commons.Address;
 
 /**
  * Представление о человеке.
@@ -12,6 +13,17 @@ package ru.avalon.java.dev.j10.labs.models;
  * </ol>
  */
 public class Person {
+    public Person(Passport PassportData, Address Registration){
+        this.PassportData = PassportData;
+        this.Registration = Registration;
+    }
+    Passport PassportData;
+    Address Registration;
+     
+      
+/*
+
+}
 
     /*
      * TODO(Студент): Создайте класс Address.
@@ -46,12 +58,29 @@ public class Person {
      *
      * @return имя человека в виде строки.
      */
-    public String getFullName() {
+    public String getFullName() {  
+        if (PassportData.Otchestvo != null){
+        String FullName = PassportData.Surname + " " + PassportData.Name + " " + PassportData.Otchestvo;
+        return FullName;
+        }
+        else if (PassportData.SecondName != null)  {
+        String FullName = PassportData.Name + " " + PassportData.SecondName.substring(0, 1) + "." + " " + PassportData.Surname;
+        return FullName;
+        }
+        else {
+            String FullName = PassportData.Surname + " " + PassportData.Name;
+            return FullName;
+        }
+       
+    }
+       
+        
         /*
          * TODO(Студент): Закончить определение метода 'getFullName()' класса 'Person'
          */
-        return null;
-    }
+           
+           
+           
 
     /**
      * Возвращает адрес, по которому проживает человек.
@@ -61,10 +90,11 @@ public class Person {
      *
      * @return адрес регистрации в виде строки.
      */
-    public String getAddress() {
+  public String getAddress() {
+      String Reg = Registration.Gorod + ", " + Registration.Ulica + " " + Registration.Dom + ", " + Registration.Kvartira; 
         /*
          * TODO(Студент): Закончить определение метода 'getAddress()' класса 'Person'
          */
-        return null;
-    }
+      return Reg;
+}
 }

@@ -1,3 +1,4 @@
+package ru.avalon.java.dev.j10.labs.commons;
 /*
  * TODO(Студент): Создайте класс Address.
  *
@@ -13,3 +14,18 @@
  * 4. Подумайте над тем, какие методы должны быть объявлены
  *    в классе.
  */
+ public class Address {
+     public Address(String Gorod, String Ulica, int Dom, int Kv){
+         this.Gorod = Gorod;
+         this.Ulica = Ulica;
+         this.Dom = Dom;
+         Kvartira = Kv;
+     }
+     
+    public String Gorod;
+    public String Ulica;
+    public int Dom;
+    public int Kvartira;
+    
+    
+ }

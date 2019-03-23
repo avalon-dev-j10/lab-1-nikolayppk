@@ -15,17 +15,28 @@ package ru.avalon.java.dev.j10.labs.commons;
  *    в классе.
  */
  public class Address {
-     public Address(String Gorod, String Ulica, int Dom, int Kv){
-         this.Gorod = Gorod;
-         this.Ulica = Ulica;
-         this.Dom = Dom;
-         Kvartira = Kv;
+     public Address(String gorod, String ulica, int dom, int kv){
+         this.gorod = gorod;
+         this.ulica = ulica;
+         this.dom = dom;
+         kvartira = kv;
      }
-     
-    public String Gorod;
-    public String Ulica;
-    public int Dom;
-    public int Kvartira;
+      public String getgorod(){
+     return gorod;
+   }
+   public String getulica(){
+     return ulica;
+   }
+   public int getdom(){
+           return dom;
+   }
+   public int getkvartira(){
+     return kvartira;
+   }
+     private String gorod;
+     private String ulica;
+     private int dom;
+     private int kvartira;
     
     
  }

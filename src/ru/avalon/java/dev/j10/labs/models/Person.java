@@ -1,4 +1,5 @@
 package ru.avalon.java.dev.j10.labs.models;
+import ru.avalon.java.dev.j10.labs.commons.Address;
 
 /**
  * Представление о человеке.
@@ -11,7 +12,18 @@ package ru.avalon.java.dev.j10.labs.models;
  *     <li>пропиской по месту жительства.
  * </ol>
  */
-public class Person {
+public class Person  {
+    public Person(Passport passportData, Address registration){
+        this.passportData = passportData;
+        this.registration = registration;
+    }
+    Passport passportData;
+    Address registration;
+     
+      
+/*
+
+}
 
     /*
      * TODO(Студент): Создайте класс Address.
@@ -46,12 +58,29 @@ public class Person {
      *
      * @return имя человека в виде строки.
      */
-    public String getFullName() {
+    public String getFullName() {  
+        if (passportData.getotchestvo() != null){
+        String fullName = passportData.getsurname() + " " + passportData.getname() + " " + passportData.getotchestvo();
+        return fullName;
+        }
+        else if (passportData.getSecondName() != null)  {
+        String fullName = passportData.getname() + " " + passportData.getSecondName().substring(0, 1) + "." + " " + passportData.getsurname();
+        return fullName;
+        }
+        else {
+            String fullName = passportData.getsurname() + " " + passportData.getname();
+            return fullName;
+        }
+       
+    }
+       
+        
         /*
          * TODO(Студент): Закончить определение метода 'getFullName()' класса 'Person'
          */
-        return null;
-    }
+           
+           
+           
 
     /**
      * Возвращает адрес, по которому проживает человек.
@@ -61,10 +90,10 @@ public class Person {
      *
      * @return адрес регистрации в виде строки.
      */
-    public String getAddress() {
+  public String getAddress() {
+      String Reg = registration.getgorod() + ", " + registration.getulica() + " " + registration.getdom() + ", " + registration.getkvartira(); 
         /*
          * TODO(Студент): Закончить определение метода 'getAddress()' класса 'Person'
          */
-        return null;
-    }
-}
+      return Reg;
+}}

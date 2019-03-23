@@ -13,23 +13,23 @@ public static void main (String arg[]){
          * FIXME(Студент): Измените определение метода так, чтобы он стал точкой входа в приложение.
          */
 
-       Passport PassportIvanov = new Passport("Иван","Иванов", "Иванович");
-       Address AddressIvanov = new Address("Спб", "Ленина", 6, 100);
+       Passport passportIvanov = new Passport("Иван", "Иванов", "Иванович");
+       Address addressIvanov = new Address("Спб", "Ленина", 6, 100);
       
-       Passport PassportSmith = new Passport("John", "Edvard");
-       PassportSmith.SecondName = "Smith";
-       Address AddressSmith = new Address("London", "Green Street", 5, 2);
+       Passport passportSmith = new Passport("John", "Edvard");
+       passportSmith.setSecondname("Smith");
+       Address addressSmith = new Address("London", "Green Street", 5, 2);
        
-       Person ivanov = new Person(PassportIvanov, AddressIvanov);
-       Person smith = new Person(PassportSmith, AddressSmith);
+       Person ivanov = new Person(passportIvanov, addressIvanov);
+       Person smith = new Person(passportSmith, addressSmith);
        
-       String IvanovFullName = ivanov.getFullName();
-       System.out.println(IvanovFullName);
-       String IvanovAddress = ivanov.getAddress();
-       System.out.println(IvanovAddress);
+       String ivanovFullName = ivanov.getFullName();
+       System.out.println(ivanovFullName);
+       String ivanovAddress = ivanov.getAddress();
+       System.out.println(ivanovAddress);
       
-       String SmithFullName = smith.getFullName();
-       System.out.println(SmithFullName);
+       String smithFullName = smith.getFullName();
+       System.out.println(smithFullName);
        
        String SmithAddress = smith.getAddress();
        System.out.println(SmithAddress);

@@ -12,13 +12,13 @@ import ru.avalon.java.dev.j10.labs.commons.Address;
  *     <li>пропиской по месту жительства.
  * </ol>
  */
-public class Person {
-    public Person(Passport PassportData, Address Registration){
-        this.PassportData = PassportData;
-        this.Registration = Registration;
+public class Person  {
+    public Person(Passport passportData, Address registration){
+        this.passportData = passportData;
+        this.registration = registration;
     }
-    Passport PassportData;
-    Address Registration;
+    Passport passportData;
+    Address registration;
      
       
 /*
@@ -59,17 +59,17 @@ public class Person {
      * @return имя человека в виде строки.
      */
     public String getFullName() {  
-        if (PassportData.Otchestvo != null){
-        String FullName = PassportData.Surname + " " + PassportData.Name + " " + PassportData.Otchestvo;
-        return FullName;
+        if (passportData.getotchestvo() != null){
+        String fullName = passportData.getsurname() + " " + passportData.getname() + " " + passportData.getotchestvo();
+        return fullName;
         }
-        else if (PassportData.SecondName != null)  {
-        String FullName = PassportData.Name + " " + PassportData.SecondName.substring(0, 1) + "." + " " + PassportData.Surname;
-        return FullName;
+        else if (passportData.getSecondName() != null)  {
+        String fullName = passportData.getname() + " " + passportData.getSecondName().substring(0, 1) + "." + " " + passportData.getsurname();
+        return fullName;
         }
         else {
-            String FullName = PassportData.Surname + " " + PassportData.Name;
-            return FullName;
+            String fullName = passportData.getsurname() + " " + passportData.getname();
+            return fullName;
         }
        
     }
@@ -91,10 +91,9 @@ public class Person {
      * @return адрес регистрации в виде строки.
      */
   public String getAddress() {
-      String Reg = Registration.Gorod + ", " + Registration.Ulica + " " + Registration.Dom + ", " + Registration.Kvartira; 
+      String Reg = registration.getgorod() + ", " + registration.getulica() + " " + registration.getdom() + ", " + registration.getkvartira(); 
         /*
          * TODO(Студент): Закончить определение метода 'getAddress()' класса 'Person'
          */
       return Reg;
-}
-}
+}}

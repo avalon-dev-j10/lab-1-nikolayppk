@@ -15,25 +15,40 @@ package ru.avalon.java.dev.j10.labs.models;
  *  <li> орган, выдавший документ.
  * </ol>
  */
-public class Passport {
-   public Passport(String Name, String Surname, String Otchestvo){
-       this.Name = Name;
-       this.Surname = Surname;
-       this.Otchestvo = Otchestvo; 
+ public class Passport  {
+   public Passport(String name, String surname, String otchestvo){
+       this.name = name;
+       this.surname = surname;
+       this.otchestvo = otchestvo; 
     } 
-  public Passport(String Name, String Surname){
-       this.Name = Name;
-       this.Surname = Surname;
+   public Passport(String name, String surname){
+       this.name = name;
+       this.surname = surname;
   }
-    
-public int Number;
-public String Name;
-public String Surname;
-public String Otchestvo;
-public String SecondName;
-public int Birthday;
-int DataVedachy;
-String KemVydan;
+   public String setSecondname(String secondName){
+       this.secondName = secondName;
+     return secondName;  
+   }
+   public String getname(){
+     return secondName;
+   }
+   public String getotchestvo(){
+            return otchestvo;
+   }
+   public String getsurname(){
+            return surname;
+   }
+    public String getSecondName(){
+            return secondName;
+    }
+ private int number;
+ private String name;
+ private String surname;
+ private String otchestvo;
+ private String secondName;
+ private int birthday;
+ private int dataVedachy;
+ private String kemVydan;
 
 
 }
